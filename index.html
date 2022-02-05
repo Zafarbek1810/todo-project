@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Todo management</title>
+</head>
+
+<body>
+
+  <!-- Section -->
+  <div class="section py-2">
+    <div class="container-fluid ">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <h2>TODO Management System</h2>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Show salary</button>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <div class="card">
+            <h5 class="card-header bg-dark text-white">Adding a new task</h5>
+            <div class="card-body">
+              <form name="myForm">
+                <input type="text" placeholder="Title" class="form-control mb-2" required name="title" />
+                <textarea name="desc" cols="30" rows="4" class="form-control mb-2" required></textarea>
+                <select name="staff" required class="form-select mb-2">
+                  <option value="">Select staff</option>
+                  <option value="Ali">Ali</option>
+                  <option value="Vali">Vali</option>
+                  <option value="Jack">Jack</option>
+                  <option value="Dilshod">Dilshod</option>
+                  <option value="Zafar">Zafar</option>
+                </select>
+                <label for="startDate">Start date</label>
+                <input type="date" name="startDate" id="startDate" class="form-control mb-2" />
+                <label for="finishDate">Finish date</label>
+                <input type="date" name="finishDate" id="finishDate" class="form-control mb-2" />
+                <select name="status" class="form-select mb-2" required>
+                  <option value="">Select status</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Doing">Doing</option>
+                  <option value="Done">Done</option>
+                </select>
+                <input type="number" placeholder="Price" required class="form-control mb-2" name="price" />
+                <button class="btn btn-dark d-block text-center w-100 addTask">
+                  Add
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <h5 class="card-header bg-primary text-white">Pending</h5>
+            <div class="card-body pending">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <h5 class="card-header bg-warning text-white">Doing</h5>
+            <div class="card-body doing"></div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <h5 class="card-header bg-info text-white">Done</h5>
+            <div class="card-body done"></div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <h5 class="card-header bg-success text-white">Closed</h5>
+            <div class="card-body closed"></div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <h5 class="card-header bg-secondary text-white">Rejected</h5>
+            <div class="card-body rejected"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Staff salary</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Staff</th>
+                <th scope="col">Task's count</th>
+                <th scope="col">Salary</th>
+              </tr>
+            </thead>
+            <tbody class="tableBody">
+              
+
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
